@@ -15,48 +15,90 @@
         ?>
         </div>
         <div class="contprin">
+             <div class="descread">
+             <div class="textcontl">
+             Descripcion <br>
+            <?php
+                 echo $user['descripcion'];
+            ?>
+            </div>
+            </div>
 
+             <div class="generosread">
+             <div class="textcontl">
+             Genros <br>
+            <?php
+                 echo $user['generos'];
+            ?>
+            </div>
+            </div>
+
+             <div class="generosread">
+             <div class="textcontl">
+             Productora <br>
+            <?php
+                 echo $user['productora'];
+            ?>
+            </div>
+            </div>
         </div>
-        <div class="readunderi" ">
+
+
+       
         <?php
-             echo $user['titulo'];
+        if($user['tipo']==="Serie"){
+        echo '<div class="serier">';
+        echo '<div class="textcont">';
+        echo 'Serie';
+        echo '</div>';
+        echo '</div>';
+        }else{
+        echo '<div class="pelicular">';
+        echo '<div class="textcont">';
+        echo 'Pelicula';
+        echo '</div>';
+        echo '</div>';
+         }
         ?>
-        </div>
+       
 
         <div class="padread">
         
         </div>
 
         <div class="readunderi" ">
+        <div class="textcont">
         <?php
-             echo $user['titulo'];
+             echo $user['relasedate'];
         ?>
+        </div>
         </div>
 
         <div class="padread">
-        
         </div>
 
-        <div class="readunderi" ">
+        
         <?php
-             echo $user['titulo'];
+              if($user['emision']==="yes"){
+              echo '<div class="contprine">';
+              echo '<div class="tttext">';
+              echo 'En emision';
+              echo '</div>';
+              echo '</div>';
+              }else{
+              echo '<div class="contprinf">';
+              echo '<div class="tttext">';
+              echo 'Finalizado';
+              echo '</div>';
+              echo '</div>';
+              }
+
         ?>
-        </div>
 
         <div class="padread">
+        </div>
+
         
-        </div>
-
-        <div class="readunderi" ">
-        <?php
-             echo $user['titulo'];
-        ?>
-        </div>
-
-        <div class="padread">
-        
-        </div>
-
         
     </div>
     <p><a href="index.php?page=controller_user&op=list">Volver</a></p>

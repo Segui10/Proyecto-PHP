@@ -3,9 +3,6 @@
     <div class="container">
     	<div class="row">
     		<p><a href="index.php?page=controller_user&op=create"><img src="view/img/anadir.png"></a></p>
-
-    		
-    		
                 <?php
                 
                     if ($rdo->num_rows === 0){
@@ -22,7 +19,7 @@
                             echo '<div class="img1">';
                             echo '<img class="img" src="'. $row['img'] . '">';
                             echo '</div>';
-                            /*if($row['tipo']==="Serie"){
+                            if($row['tipo']==="Serie"){
                             echo '<div class="serie">';
                             echo 'Serie';
                             echo '</div>';
@@ -30,7 +27,7 @@
                             echo '<div class="pelicula">';
                             echo 'Pelicula';
                             echo '</div>';
-                            }*/
+                            }
                             
                             echo '</div>';
 

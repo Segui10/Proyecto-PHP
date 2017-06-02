@@ -4,7 +4,7 @@
          fontstyle:italic;
 }
 body{
-    background-color:#BDBDBD;
+    background-color:#585858;
     background-attachment: fixed;
     background-repeat:no-repeat;
 }
@@ -20,6 +20,7 @@ h1{
 	background-color:#FE2E2E;
 }
 #menu {
+	font-family: 'Nunito Sans', sans-serif;
 	height:60px;
 	background-color:#585858;
 	text-align:center;
@@ -34,6 +35,7 @@ h1{
 }
 #contenido {
 	padding: 20px;
+	font-family: 'Nunito Sans', sans-serif;
 }
 
 #footer {
@@ -110,6 +112,8 @@ h1{
 }
 
 .title{
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
 	margin-left: 30px;
 	text-align: left;
 	font-size: 60px;
@@ -161,6 +165,7 @@ h1{
 }
 
 .button{
+	text-decoration: none;
 	margin-top: 5px;
 	margin-right: 5px;
 	float:right;
@@ -181,12 +186,15 @@ h1{
 	
 }
 
-.textbutton{
+.textbutton a{
 	text-decoration:none;   
+	color: white;	
+}
+
+.textbutton{
 	margin-top: 25px;
 	text-align: center;
 	font-size: 24px;
-	color: white;	
 }
 
 
@@ -195,7 +203,7 @@ h1{
 	padding-right: 5px;
 	float:left;
 	background-color:#585858;
-	width: 115px;
+	width: 130px;
 	height: 60px;
 	color: white;
 	
@@ -285,7 +293,7 @@ h1{
 }
 
 .pelicula{
-	
+	margin-top: -30px;
 	background-color: #FE642E;
 	float: right;
 	height: 30px;
@@ -293,9 +301,12 @@ h1{
 	color: white;
 	text-align: center;
 	font-size: 17px;
+	z-index: 2000;
 }
 
 .img{
+	z-index: 1;
+	float: left;
 	width: 180px;
 	height: 240px;
 }
@@ -316,7 +327,7 @@ h1{
 .inforead{
 	padding-top: 5px;
 	width: 900px;
-	height: 700px;
+	height: 615px;
 	margin-left: 10%;
 	background-color: #585858;
 }
@@ -369,7 +380,6 @@ h1{
 	float: left;
 	margin-bottom: 5px;
 	float: left;
-	background-color:#333;
 	margin-left: 5px;
 	width: 605px;
 	height: 410px;
@@ -379,8 +389,89 @@ h1{
 	float: left;
 	margin-bottom: 5px;
 	float: left;
-	background-color:#333;
+	background-color:#585858;
 	margin-left: 5px;
 	width: 605px;
 	height: 40px;
+}
+
+.icono{
+	margin-right: 19px;
+	margin-left: 41%;
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+
+.contprinf{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#FE2E2E;
+	margin-left: 5px;
+	width: 280px;
+	height: 40px;
+}
+
+.contprine{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#04B404;
+	margin-left: 5px;
+	width: 280px;
+	height: 40px;
+}
+
+.textcont{
+	margin-top: 9px;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+}
+
+.serier{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#FE2E2E;
+	margin-left: 5px;
+	width: 280px;
+	height: 40px;
+}
+
+.pelicular{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#FE642E;
+	margin-left: 5px;
+	width: 280px;
+	height: 40px;
+}
+
+.descread{
+	margin-left: 5px;
+	float: left;
+	margin-top: 5px;
+	background: #333;
+	width: 595px;
+	height: 200px;
+}
+
+.textcontl{
+	margin-left: 5px;
+	margin-top: 9px;
+	text-align: left;
+	color: white;
+	font-size: 18px;
+}
+
+.generosread{
+	margin-left: 5px;
+	float: left;
+	margin-top: 5px;
+	background: #333;
+	width: 595px;
+	height: 80px;
 }
