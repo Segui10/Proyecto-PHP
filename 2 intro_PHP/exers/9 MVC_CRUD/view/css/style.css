@@ -300,8 +300,87 @@ h1{
 	height: 240px;
 }
 
+.imgbig{
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 270px;
+	height: 400px;
+}
+
 .img1{
 	z-index: 1;
 	width: 180px;
 	height: 240px;
+}
+
+.inforead{
+	padding-top: 5px;
+	width: 900px;
+	height: 700px;
+	margin-left: 10%;
+	background-color: #585858;
+}
+
+.imagenbig{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#333;
+	margin-left: 5px;
+	width: 280px;
+	height: 410px;
+}
+
+.relasedata{
+	margin-top: 5px;
+	margin-left: 5px;
+	background-color:#333;
+	width: 280px;
+}
+
+.tituloreadc{
+	margin-bottom: 5px;
+	margin-left: 5px;
+	float: left;
+	width: 890px;
+	height: 60px;
+	background: #FE2E2E;
+}
+
+.ttread{
+	text-decoration:none;   
+	margin-top: 4px;
+	text-align: center;
+	font-size: 40px;
+	color: white;	
+}
+
+.readunderi{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#333;
+	margin-left: 5px;
+	width: 280px;
+	height: 40px;
+}
+
+.contprin{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#333;
+	margin-left: 5px;
+	width: 605px;
+	height: 410px;
+}
+
+.padread{
+	float: left;
+	margin-bottom: 5px;
+	float: left;
+	background-color:#333;
+	margin-left: 5px;
+	width: 605px;
+	height: 40px;
 }

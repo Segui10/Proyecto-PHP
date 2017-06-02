@@ -1,107 +1,63 @@
 <div id="contenido">
-    <h1>Informacion del Usuario</h1>
-    <p>
-    <table border='2'>
-        <tr>
-            <td>Usuario: </td>
-            <td>
-                <?php
-                    echo $user['user'];
-                ?>
-            </td>
-        </tr>
-    
-        <tr>
-            <td>Contraseña: </td>
-            <td>
-                <?php
-                    echo $user['pass'];
-                ?>
-            </td>
-        </tr>
+    <div class="inforead">
+
+        <div class="tituloreadc">
+            <div class="ttread">
+            <?php
+                 echo $user['titulo'];
+            ?>
+            </div>
+        </div>
+
+        <div class="imagenbig" ">
+        <?php
+             echo '<img class="imgbig" src="'. $user['img'] . '">';
+        ?>
+        </div>
+        <div class="contprin">
+
+        </div>
+        <div class="readunderi" ">
+        <?php
+             echo $user['titulo'];
+        ?>
+        </div>
+
+        <div class="padread">
         
-        <tr>
-            <td>Nombre: </td>
-            <td>
-                <?php
-                    echo $user['name'];
-                ?>
-            </td>
-        </tr>
+        </div>
+
+        <div class="readunderi" ">
+        <?php
+             echo $user['titulo'];
+        ?>
+        </div>
+
+        <div class="padread">
         
-        <tr>
-            <td>DNI: </td>
-            <td>
-                <?php
-                    echo $user['dni'];
-                ?>
-            </td>
-        </tr>
+        </div>
+
+        <div class="readunderi" ">
+        <?php
+             echo $user['titulo'];
+        ?>
+        </div>
+
+        <div class="padread">
         
-        <tr>
-            <td>Sexo: </td>
-            <td>
-                <?php
-                    echo $user['sex'];
-                ?>
-            </td>
-        </tr>
+        </div>
+
+        <div class="readunderi" ">
+        <?php
+             echo $user['titulo'];
+        ?>
+        </div>
+
+        <div class="padread">
         
-        <tr>
-            <td>Fecha de nacimiento: </td>
-            <td>
-                <?php
-                    echo $user['birthdate'];
-                ?>
-            </td>
-        </tr>
+        </div>
+
         
-        <tr>
-            <td>Edad: </td>
-            <td>
-                <?php
-                    echo $user['age'];
-                ?>
-            </td>
-            
-        </tr>
-        
-        <tr>
-            <td>Pais: </td>
-            <td>
-                <?php
-                    echo $user['country'];
-                ?>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>Idioma: </td>
-            <td>
-                <?php
-                    echo $user['language'];
-                ?>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>Observaciones: </td>
-            <td>
-                <?php
-                    echo $user['comment'];
-                ?>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>Aficiones: </td>
-            <td>
-                <?php
-                    echo $user['hobby'];
-                ?>
-            </td>
-        </tr>
-    </table>
-    </p>
+    </div>
     <p><a href="index.php?page=controller_user&op=list">Volver</a></p>
 </div>

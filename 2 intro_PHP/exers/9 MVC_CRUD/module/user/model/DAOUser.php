@@ -32,7 +32,7 @@
             return $res;
 		}
 		
-		function select_user($user){
+		function select_user($titulo){
 			$sql = "SELECT * FROM series WHERE titulo='$titulo'";
 			
 			$conexion = connect::con();
