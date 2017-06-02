@@ -12,8 +12,10 @@
         	}
             $productora=$datos[productora];
             $addfor=$datos[addfor];
-        	$sql = " INSERT INTO series (titulo, tipo, generos, relasedate, descripcion, productora, addfor)"
-        		. " VALUES ('$titulo', '$tipo', '$generos', '$relasedate', '$descripcion', '$productora', '$addfor')";
+            $img=$datos[img];
+            $emision=$datos[emision];
+        	$sql = " INSERT INTO series (titulo, tipo, generos, relasedate, descripcion, productora, addfor, emision, img)"
+        		. " VALUES ('$titulo', '$tipo', '$generos', '$relasedate', '$descripcion', '$productora', '$addfor', '$emision', '$img')";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

@@ -128,6 +128,7 @@ h1{
 }
 
 .imagen{
+	margin-bottom: 5px;
 	float: left;
 	background-color:grey;
 	margin-left: 5px;
@@ -244,6 +245,26 @@ h1{
 	width: 180px;
 }
 
+.enemision{
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	color: white;
+	background-color: #04B404;
+	height: 40px;
+	width: 180px;
+}
+
+.finalizado{
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	color: white;
+	background-color: #FE2E2E;
+	height: 40px;
+	width: 180px;
+}
+
 .tttext{
 	margin-top: 5px;
 	text-align: center;
@@ -252,8 +273,9 @@ h1{
 }
 
 .serie{
+	z-index: 2;
+	margin-top: -30px;
 	background-color: #FE2E2E;
-	margin-top: 210px;
 	float: right;
 	height: 30px;
 	width: 90px;
@@ -263,12 +285,23 @@ h1{
 }
 
 .pelicula{
+	
 	background-color: #FE642E;
-	margin-top: 210px;
 	float: right;
 	height: 30px;
 	width: 90px;
 	color: white;
 	text-align: center;
 	font-size: 17px;
+}
+
+.img{
+	width: 180px;
+	height: 240px;
+}
+
+.img1{
+	z-index: 1;
+	width: 180px;
+	height: 240px;
 }

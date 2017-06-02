@@ -31,12 +31,12 @@
                 <input type="checkbox" name="generos[]" value="Aventuras">Aventuras
                 <input type="checkbox" name="generos[]" value="Terror">Terror
                 <input type="checkbox" name="generos[]" value="Fantasia">Fantasia
-                <input type="checkbox" name="generos[]" value="Comedia">Comedia
+                <input type="checkbox" name="generos[]" value="Comedia">Comedia<br>
                 <input type="checkbox" name="generos[]" value="Ciencia Ficcion">Ciencia Ficcion
                 <input type="checkbox" name="generos[]" value="Deportes">Deportes
                 <input type="checkbox" name="generos[]" value="Dramaticas">Dramaticas
                 <input type="checkbox" name="generos[]" value="Gore">Gore
-                <input type="checkbox" name="generos[]" value="Guerra">Guerra
+                <input type="checkbox" name="generos[]" value="Guerra">Guerra<br>
                 <input type="checkbox" name="generos[]" value="Misterio">Misterio
                 <input type="checkbox" name="generos[]" value="Musical">Musical
                 <input type="checkbox" name="generos[]" value="Policiaca">Policiaca
@@ -93,6 +93,28 @@
                     </span>
                 </font></font></td>
             </tr>
+
+            <tr>
+                <td>Emision:  </td>
+                <td>
+                <input type="radio" id="emision" name="emision" value="yes"> En Emision
+                <input type="radio" id="emision" name="emision" value="no"> Finalizado
+                <td>
+            </tr>
+
+             <tr>
+                <td>Imagen: </td>
+                <td><input type="text" id="img" name="img" placeholder="URL" value=""/></td>
+                <td><font color="red">
+                    <span id="error_addfor" class="error">
+                        <?php
+                           echo $error['addfor']
+                        ?>
+                    </span>
+                </font></font></td>
+            </tr>
+
+
 
             <tr>
                 <td><input type="submit" name="create" id="create"/></td>
