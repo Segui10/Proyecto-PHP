@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo validación formulario</title>
+	<style type="text/css"> 
+		* { font-family:Arial, Helvetica, sans-serif;}
+		table td{ 
+		   border-style:none; 
+		}
+		.error{ color: red; font-size:9px; font-weight:bold;}
+	</style>
+	
+	<link rel="stylesheet" href="./jqueryui/jquery-ui.min.css">
+	<script src="./jqueryui/external/jquery/jquery.js"></script>
+	<script src="./jqueryui/jquery-ui.min.js"></script>
+	<script src="./validaciones.js"></script>
+	<script language="javascript">
+		function validar(){
+			var ctrol=document.formdatos.nombre;
+			var val=textorequerido(ctrol,3);
+			if (val==false) {
+				alert('err1','Campo nombre no valido');
+				document.formdatos.nombre.focus();
+				return -1;	
+			}
+			mostrarerror('err1',''); 
+			
+			var home=document.formdatos.sexo[0].checked;
+		    var dona=document.formdatos.sexo[1].checked;
+			if (home==false && dona==false) {
+				mostrarerror('err2','Debe seleccionar sexo');
+				document.formdatos.sexo[0].focus();
+				return -1;	
+			}
+			mostrarerror('err2',''); 
+			
+			ctrol=document.formdatos.edad;
+			val=numerorango(ctrol,18,90);
+			if (val==false) {
+				mostrarerror('err3','Edad fuera de rango');
+				document.formdatos.edad.focus();
+				return -1;
+			}
+			mostrarerror('err3','');
+			
+			ctrol=document.formdatos.email;
+			val=textorequerido(ctrol,6);
+			if (val==false) {
+				mostrarerror('err5','Campo email no puede estar vacio');
+				document.formdatos.email.focus();
+				return -1;	
+			}
+			val=compruebaemail(ctrol);
+			if (val==false) {
+				mostrarerror('err5','El email introducido no es válido');
+				document.formdatos.email.focus();
+				return -1;
+			}
+			mostrarerror('err5',''); 
+			
+			ctrol=document.formdatos.nif;
+			val=compruebanif(ctrol);
+			if (val==false) {
+				mostrarerror('err6','El NIF introducido no es válido');
+				document.formdatos.nif.focus();
+				return -1;
+			}
+			mostrarerror('err6',''); 
+			
+			var indice=document.formdatos.ingles.selectedIndex;
+			// Si quisiera recuperar el valor de la opción seleccionada:
+			// var valor=document.formdatos.ingles.options[indice].value; 
+			if (indice<=0) {
+				mostrarerror('err7','Debe seleccionar nivel de ingles');
+				document.formdatos.ingles.focus();
+				return -1;
+			}
+			mostrarerror('err7','');
+			
+			ctrol=document.formdatos.otros;
+			val=longmaxima(ctrol,280);
+			if (val==false) {
+				mostrarerror('err8','Campo Otros Datos excede la longitud');
+				document.formdatos.otros.focus();
+				return -1;
+			}
+			mostrarerror('err8','Formulario Enviado!');
+			//document.formdatos.submit();
+		}
+		
+		
+		function mostrarerror_OLD(iddiv, mensaje){
+			document.getElementById(iddiv).innerHTML=mensaje; 
+		}
+	
+		var $dialog;
+		function iniciarUI(){
+			$dialog=$("#mensajedialog");
+			$dialog.dialog({
+				title: "Validación Formulario",
+				autoOpen: false,
+				modal: true
+		
+			})
+		}
+		
+		function mostrarerror(iddiv, mensaje){
+			$dialog.html(mensaje);
+			$dialog.dialog("open");
+			$dialog.dialog("option","width", mensaje.length*15 );
+		}
+	</script>
+</head>
+<body>
+	<h1> Alta Usuario </h1>
+	<form name="formdatos" method="get" action="">
+	<table>
+		<tr><td>Nombre:</td> 
+	    <td><input type="text" id="nombre"
+	    name="nombre" maxlength="100" size="40" required autofocus />&nbsp;* </td>
+		<td><div id="err1" class="error"></div></td></tr>
+	    
+		<tr><td>Sexo:</td>
+		<td><input type="radio" name="sexo" value="h"/>Hombre &nbsp;&nbsp;
+	    <input type="radio" name="sexo" value="m"  />Mujer &nbsp;&nbsp;*</td>
+		<td><div id="err2" class="error"></div></td></tr>
+	    
+		<tr><td>Edad:</td>
+		<td><input type="number"  name="edad" size="20" placeholder="edad" max="90" min="18" required />&nbsp;* </td>
+		<td><div id="err3" class="error"></div></td></tr>
+	    
+		<tr><td>Ciudadano Europeo:</td>
+		<td><input type="checkbox" name="europeo" checked /> </td>
+		<td><div id="err4" class="error"></div></td></tr>
+	    
+		<tr><td>email:</td>
+		<td><input type="email" name="email"  size="40" required/>&nbsp;*</td>
+		<td><div id="err5" class="error"></div></td></tr>
+	    
+		<tr><td>NIF:</td>
+		<td><input type="text" name="nif" />*<br/></td>
+		<td><div id="err6" class="error"></div></td></tr>
+	    
+		<tr><td>Nivel de Inglés:</td>
+		<td><select name="ingles"   >
+	    	<option>Selecciona nivel.... </option>
+	        <option value="b">Bajo</option>
+	        <option value="m">Medio</option>
+	        <option value="a">Alto</option>
+	    </select>&nbsp;*</td>
+		<td><div id="err7" class="error"></div></td></tr>
+	    
+		<tr><td>Otros datos:</td>
+		<td><textarea name="otros" cols="35" rows="5" maxlength="300"></textarea></td>
+		<td><div id="err8" class="error"></div></td></tr>
+	    
+		<tr><td colspan="3" style="text-align:center">
+		 <input type="button" name="enviar" value="Enviar" onclick="validar();" />
+		</tname="nombre"d></tr>
+	</table>
+	</form>
+	<div id="mensajedialog"></div>
+</body>
+<script>
+   $(document).ready(iniciarUI);
+</script>
+</html>

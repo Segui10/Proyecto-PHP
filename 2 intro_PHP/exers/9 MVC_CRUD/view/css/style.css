@@ -1,0 +1,274 @@
+.error { color: red;
+         font-family: arial;
+         font-size: 10pt;
+         fontstyle:italic;
+}
+body{
+    background-color:#BDBDBD;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+}
+h1{
+    font-size: 32pt;
+}
+#wrapper {
+	background-color:#FFFFFF;	
+}
+#header {
+	background-repeat:no-repeat;
+	height:150px;
+	background-color:#FE2E2E;
+}
+#menu {
+	height:60px;
+	background-color:#585858;
+	text-align:center;
+}
+#menu a, #footer a{
+	color:#FFFFFF;
+	text-decoration:none;
+	font-weight:bold;
+}
+#menu a:hover, #footer a:hover{
+	text-decoration:underline;
+}
+#contenido {
+	padding: 20px;
+}
+
+#footer {
+	background-color:#585858;
+	height:25px;
+	padding-top:5px;
+	text-align:center;
+}
+.Button_green {
+	background-color:green;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid green;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_green:hover {
+	background-color:greenyellow;
+}
+.Button_green:active {
+	position:relative;
+	top:1px;
+}
+.Button_blue {
+	background-color:blue;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid blue;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_blue:hover {
+	background-color:cyan;
+}
+.Button_blue:active {
+	position:relative;
+	top:1px;
+}
+.Button_red {
+	background-color:crimson;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid crimson;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.Button_red:hover {
+	background-color:red;
+}
+.Button_red:active {
+	position:relative;
+	top:1px;
+}
+
+.title{
+	margin-left: 30px;
+	text-align: left;
+	font-size: 60px;
+	color: white;
+
+}
+
+.tarjeta{
+	margin-right: 25px;
+	margin-bottom: 20px;
+	float:left;
+	padding-top: 5px;
+	width: 350px;
+	background-color:#585858;
+	height: 400px;
+}
+
+.imagen{
+	float: left;
+	background-color:grey;
+	margin-left: 5px;
+	width: 180px;
+	height: 240px;
+}
+
+.contenido{
+	float: left;
+	padding-top: 5px;
+	background-color:#333;
+	margin-left: 5px;
+	width: 190px;
+	height: 390px;
+}
+.margtop{
+	margin-top: -5px;
+	float: right;
+	background-color:#FFFFFF;
+	width: 150px;
+	height: 65px;
+}
+
+.margbot{
+	margin-top: 5px;
+	float: right;
+	background-color:#FFFFFF;
+	width: 150px;
+	height: 80px;
+}
+
+.button{
+	margin-top: 5px;
+	margin-right: 5px;
+	float:right;
+	background-color:#FE2E2E;
+	margin-left: 5px;
+	width: 145px;
+	height: 80px;
+	color: white;
+	
+}
+.button:hover {
+	background-color:#FA5858;
+	
+}
+.button:active {
+	background-color:#F5A9A9;
+	color: #333;
+	
+}
+
+.textbutton{
+	text-decoration:none;   
+	margin-top: 25px;
+	text-align: center;
+	font-size: 24px;
+	color: white;	
+}
+
+
+
+.buttonmenu{
+	padding-right: 5px;
+	float:left;
+	background-color:#585858;
+	width: 115px;
+	height: 60px;
+	color: white;
+	
+}
+.buttonmenu:hover {
+	background-color:#FA5858;
+	
+}
+.buttonmenu:active {
+	background-color:#F5A9A9;
+	color: #333;
+	
+}
+
+.textbuttonmenu{
+	text-decoration:none;   
+	margin-top: 17px;
+	text-align: center;
+	font-size: 24px;	
+}
+
+.sepmenu{
+	float: left;
+	background-color:#585858;
+	width: 5px;
+	height: 60px;
+}
+
+.centermenu{
+	float: left;
+	background-color:#585858;
+	width: 10%;
+	height: 60px;
+}
+
+.background1{
+	background-image: url("view/img/404.jpg");
+}
+
+.ttitulo{
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	color: white;
+	background-color: #585858;
+	height: 40px;
+	width: 180px;
+}
+
+.tttext{
+	margin-top: 5px;
+	text-align: center;
+	color:white;
+	font-size:19px;
+}
+
+.serie{
+	background-color: #FE2E2E;
+	margin-top: 210px;
+	float: right;
+	height: 30px;
+	width: 90px;
+	color: white;
+	text-align: center;
+	font-size: 17px;
+}
+
+.pelicula{
+	background-color: #FE642E;
+	margin-top: 210px;
+	float: right;
+	height: 30px;
+	width: 90px;
+	color: white;
+	text-align: center;
+	font-size: 17px;
+}

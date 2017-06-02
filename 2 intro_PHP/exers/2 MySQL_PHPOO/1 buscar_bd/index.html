@@ -1,0 +1,30 @@
+<html>
+	<head><title>Formulario de registro de datos</title>
+		<script>
+		function valida(formulario){
+			er=/^[0-9]{4}[a-zA-Z]{3}$/;
+			if(er.test(formulario.codigo.value)==false){
+				alert("El campo Codigo debe rellenarse con 4 cifras numericas y 3 caracteres");
+				formulario.codigo.focus();
+				return false; 
+			}
+			er=/^[a-zA-Z0-9 ñÑáéíóúÁÉÍÓÚüÜÇç]+$/;
+			if(er.test(formulario.tipo.value)==false){
+				alert("El campo Tipo debe rellenarse con caracteres alfanumericos y espacios");
+				formulario.tipo.focus();
+				return false; 
+			}
+			return true; 
+		}
+		</script>
+	</head>
+	<body>
+		<b>FORMULARIO DE BUSQUEDA DE ARTICULOS:</b><br>
+		<i>Introduzca el codigo y el tipo del articulo a buscar.</i><br>
+		<form onSubmit="return valida(formulario)" name="formulario" method="POST" action="buscar_datos.php">
+			Codigo:<input type="text" name="codigo" size="7" maxlength="7"> 
+			Tipo:<input type="text" name="tipo" size="10" maxlength="10"> 
+			<input type="submit" value="Buscar" name="buscar">
+		</form>
+	</body>
+</html>
