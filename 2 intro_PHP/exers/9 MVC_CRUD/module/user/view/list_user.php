@@ -2,9 +2,25 @@
 
     <div class="container">
     	<div class="row">
-    		<p><a href="index.php?page=controller_user&op=create"><img src="view/img/anadir.png"></a></p>
+    		<div class="createc">
+            <div class="create">
+            <div class="textbuttont">
+            <a href="index.php?page=controller_user&op=create">Create One</a>
+            </div>
+            </div>
+            <div class="create">
+            <div class="textbuttont">
+            <a href="index.php?page=controller_user&op=create">Create Dummies</a>
+            </div>
+            </div>
+            <div class="create">
+            <div class="textbuttont">
+            <a href="index.php?page=controller_user&op=create">Delete All</a>
+            </div>
+            </div>
+            </div>
                 <?php
-                
+                //<p><a href="index.php?page=controller_user&op=create"><img src="view/img/anadir.png"></a></p>
                     if ($rdo->num_rows === 0){
                         echo '<tr>';
                         echo '<td align="center"  colspan="3">NO HAY NINGUN USUARIO</td>';

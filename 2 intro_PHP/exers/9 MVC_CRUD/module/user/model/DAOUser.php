@@ -42,24 +42,21 @@
 		}
 		
 		function update_user($datos){
-			$user=$datos[usuario];
-        	$passwd=$datos[pass];
-        	$name=$datos[nombre];
-        	$dni=$datos[DNI];
-        	$sex=$datos[sexo];
-        	$birthdate=$datos[fecha_nacimiento];
-        	$age=$datos[edad];
-        	$country=$datos[pais];
-        	foreach ($datos[idioma] as $indice) {
-        	    $language=$language."$indice:";
-        	}
-        	$comment=$datos[observaciones];
-        	foreach ($datos[aficion] as $indice) {
-        	    $hobby=$hobby."$indice:";
-        	}
-        	
-        	$sql = " UPDATE usuario SET pass='$passwd', name='$name', dni='$dni', sex='$sex', birthdate='$birthdate', age='$age',"
-        		. " country='$country', language='$language', comment='$comment', hobby='$hobby' WHERE user='$user'";
+			$titulo=$datos['title'];
+            $tipo=$datos['tipo'];
+            $relasedate=$datos['fecha_nacimiento'];
+            $descripcion=$datos['descripcion'];
+            $generos='';
+            foreach ($datos['generos'] as $indice) {
+                $generos=$generos."$indice:";
+            }
+            $productora=$datos['productora'];
+            $addfor=$datos['addfor'];
+            $img=$datos['img'];
+            $emision=$datos['emision'];
+            
+            $sql = " UPDATE series SET titulo='$titulo', tipo='$tipo', generos='$generos', relasedate='$relasedate', descripcion='$descripcion', productora='$productora',"
+                . " addfor='$addfor', emision='$emision', img='$img' WHERE titulo='$titulo'";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

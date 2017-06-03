@@ -122,7 +122,7 @@ h1{
 }
 
 .tarjeta{
-	margin-right: 25px;
+	margin-left: 5%;
 	margin-bottom: 20px;
 	float:left;
 	padding-top: 5px;
@@ -474,4 +474,65 @@ h1{
 	background: #333;
 	width: 595px;
 	height: 80px;
+}
+
+.createc{
+	text-decoration: none;
+	margin-left: 5%;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	background: #585858;
+	width: 830px;
+	height: 60px;
+	color: white;
+}
+
+.create{
+	text-decoration: none;
+	float: left;
+	margin-left: 5px;
+	background: #FE2E2E;
+	width: 270px;
+	height: 55px;
+	color: white;
+}
+
+.textbuttont{
+	text-decoration: none;
+	margin-top: 12px;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+}
+
+
+.create:hover {
+	background-color:#FA5858;
+	
+}
+.create:active {
+	background-color:#F5A9A9;
+	color: #333;
+	
+}
+.textbuttont a{
+	text-decoration:none;   
+	color: white;	
+}
+
+.gmaps{
+	margin-bottom: 20px;
+	float:left;
+	padding-top: 5px;
+	width: 1050px;
+	background-color:#585858;
+	height: 500px;
+}
+
+
+
+.cmaps {
+	margin-left: 5px;
+	width: 1035px;
+	height: 490px;
 }

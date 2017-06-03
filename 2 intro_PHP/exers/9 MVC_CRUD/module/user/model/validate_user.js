@@ -136,7 +136,7 @@ function validate(){
     var r_aficion=validate_aficion(v_aficion);*/
     
     if(!r_title){
-        document.getElementById('error_title').innerHTML = " * El title introducido no es valido";
+        document.getElementById('error_title').innerHTML = " * No has introducido ningun titulo";
         check=false;
     }else{
         document.getElementById('error_title').innerHTML = "";

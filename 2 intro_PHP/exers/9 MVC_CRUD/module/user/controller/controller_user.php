@@ -64,25 +64,21 @@
             
         case 'update';
             include("module/user/model/validate.php");
-            
             $check = true;
             $error = array(
                             'title' => '',
-                            'nombre' => '',
-                            'DNI' => '',
-                            'sexo' => '',
-                            'pass' => '',
-                            'edad' => '',
-                            'idioma' => '',
-                            'observaciones' =>'',
-                            'aficion' => '',
-                            'fecha_nacimiento' => ''
+                            'tipo' => '',
+                            'descripcion' =>'',
+                            'generos' => '',
+                            'fecha_nacimiento' => '',
+                            'productora' => '',
+                            'addfor' => ''
                     );
             if (isset($_POST['update'])){
                 $result=validate();
                 //if ($check){
                 if ($result['resultado']) {
-                    $_SESSION['title']=$_POST;
+                    $_SESSION['user']=$_POST;
                     try{
                         $daouser = new DAOUser();
     		            $rdo = $daouser->update_user($_POST);
@@ -111,7 +107,6 @@
             
             try{
                 $daouser = new DAOUser();
-                print_r($_GET['id']);
             	$rdo = $daouser->select_user($_GET['id']);
             	$user=get_object_vars($rdo);
             }catch (Exception $e){
@@ -164,6 +159,32 @@
         			$callback = 'index.php?page=503';
 			        die('<script>window.location.href="'.$callback .'";</script>');
         		}
+            }
+            
+            include("module/user/view/delete_user.php");
+            break;
+        default;
+            include("view/inc/error404.php");
+            break;
+
+             case 'deleteall';
+            if (isset($_POST['delete'])){
+                try{
+                    $daouser = new DAOUser();
+                    $rdo = $daouser->delete_user($_GET['id']);
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if($rdo){
+                    echo '<script language="javascript">alert("Borrado en la base de datos correctamente")</script>';
+                    $callback = 'index.php?page=controller_user&op=list';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
             }
             
             include("module/user/view/delete_user.php");
