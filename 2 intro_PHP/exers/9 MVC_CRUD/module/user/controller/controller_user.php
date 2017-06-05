@@ -3,6 +3,23 @@
     //session_start();
     
     switch($_GET['op']){
+        case 'listf';
+            try{
+                $daouser = new DAOUser();
+                $rdo = $daouser->select_all_user_fecha();
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                include("module/user/view/list_user.php");
+            }
+            break;
+
         case 'list';
             try{
                 $daouser = new DAOUser();
@@ -19,6 +36,142 @@
                 include("module/user/view/list_user.php");
     		}
             break;
+
+                case 'listp';
+                try{
+                    $daouser = new DAOUser();
+                    $rdo = $daouser->select_peliculas();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if(!$rdo){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    include("module/user/view/list_user.php");
+                }
+                break;
+
+            case 'lists';
+            try{
+                $daouser = new DAOUser();
+                $rdo = $daouser->select_series();
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                include("module/user/view/list_user.php");
+            }
+            break;
+
+                case 'listpf';
+                try{
+                    $daouser = new DAOUser();
+                    $rdo = $daouser->select_peliculas_fecha();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if(!$rdo){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    include("module/user/view/list_user.php");
+                }
+                break;
+
+            case 'listsf';
+            try{
+                $daouser = new DAOUser();
+                $rdo = $daouser->select_series_fecha();
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                include("module/user/view/list_user.php");
+            }
+            break;
+
+             case 'listpt';
+                try{
+                    $daouser = new DAOUser();
+                    $rdo = $daouser->select_peliculas_titulo();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if(!$rdo){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    include("module/user/view/list_user.php");
+                }
+                break;
+
+            case 'listst';
+            try{
+                $daouser = new DAOUser();
+                $rdo = $daouser->select_series_titulo();
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                include("module/user/view/list_user.php");
+            }
+            break;
+
+                 case 'listsf';
+                try{
+                    $daouser = new DAOUser();
+                    $rdo = $daouser->select_series_fecha();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if(!$rdo){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    include("module/user/view/list_user.php");
+                }
+                break;
+
+            case 'listspf';
+             try{
+                   $daouser = new DAOUser();
+                   $rdo = $daouser->select_peliculas_fecha();
+            }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+              }
+                
+             if(!$rdo){
+                   $callback = 'index.php?page=503';
+                  die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                  include("module/user/view/list_user.php");
+             }
+             break;
             
         case 'create';
             include("module/user/model/validate.php");
@@ -171,7 +324,7 @@
             if (isset($_POST['delete'])){
                 try{
                     $daouser = new DAOUser();
-                    $rdo = $daouser->delete_user($_GET['id']);
+                    $rdo = $daouser->delete_user();
                 }catch (Exception $e){
                     $callback = 'index.php?page=503';
                     die('<script>window.location.href="'.$callback .'";</script>');

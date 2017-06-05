@@ -4,7 +4,7 @@
         <table border='0'>
             <tr>
                 <td>Titulo: </td>
-                <td><input type="text" id="title" name="title" placeholder="Titulo" value="<?php echo $user['titulo'];?>" readonly /></td>
+                <td><input type="text" id="title" name="title" value="<?php echo $user['titulo'];?>" /></td>
                 <td><font color="red">
                     <span id="error_title" class="error">
                         <?php

@@ -1,6 +1,6 @@
 <div id="contenido">
     <form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" action="index.php?page=controller_user&op=create">
-        <h1>Usuario nuevo</h1>
+        <h1>Nuevo Elemento</h1>
         <table border='0'>
             <tr>
                 <td>Titulo: </td>

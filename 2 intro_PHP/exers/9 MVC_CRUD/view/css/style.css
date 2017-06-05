@@ -477,12 +477,47 @@ h1{
 }
 
 .createc{
+	float:left;
 	text-decoration: none;
-	margin-left: 5%;
+	margin-left: 15px;
 	padding-top: 5px;
 	margin-bottom: 20px;
 	background: #585858;
 	width: 830px;
+	height: 60px;
+	color: white;
+}
+
+.createop{
+	float:left;
+	text-decoration: none;
+	margin-left: 5px;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	background: #585858;
+	width: 830px;
+	height: 60px;
+	color: white;
+}
+
+.menu4{
+	text-decoration: none;
+	margin-left: 5%;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	width: 1200px;
+	height: 70px;
+	color: white;
+}
+
+.createo{
+	float:left;
+	text-decoration: none;
+	margin-left: 5px;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	background: #585858;
+	width: 280px;
 	height: 60px;
 	color: white;
 }
@@ -495,6 +530,46 @@ h1{
 	width: 270px;
 	height: 55px;
 	color: white;
+}
+
+.createplus{
+	text-decoration: none;
+	float: left;
+	margin-left: 5px;
+	background: #04B404;
+	width: 270px;
+	height: 55px;
+	color: white;
+}
+
+.createplus:hover {
+	background-color:#2EFE64;
+	
+}
+.createplus:active {
+	background-color:#58FA82;
+	color: #333;
+	
+}
+
+.createop1{
+	text-decoration: none;
+	float: left;
+	margin-left: 5px;
+	background: #0080FF;
+	width: 270px;
+	height: 55px;
+	color: white;
+}
+
+.createop1:hover {
+	background-color:#58D3F7;
+	
+}
+.createop1:active {
+	background-color:#A9E2F3;
+	color: #333;
+	
 }
 
 .textbuttont{

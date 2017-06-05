@@ -17,7 +17,7 @@
         <div class="contprin">
              <div class="descread">
              <div class="textcontl">
-             Descripcion <br>
+             <u>Descripcion</u> <br>
             <?php
                  echo $user['descripcion'];
             ?>
@@ -26,7 +26,7 @@
 
              <div class="generosread">
              <div class="textcontl">
-             Genros <br>
+             <u>Genros</u> <br>
             <?php
                  echo $user['generos'];
             ?>
@@ -35,7 +35,7 @@
 
              <div class="generosread">
              <div class="textcontl">
-             Productora <br>
+             <u>Productora</u> <br>
             <?php
                  echo $user['productora'];
             ?>

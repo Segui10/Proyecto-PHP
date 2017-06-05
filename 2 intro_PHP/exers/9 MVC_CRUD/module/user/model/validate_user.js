@@ -1,7 +1,14 @@
 function validat_title(texto){
-    if (texto.length > 0){
+    if (empty(texto)){
         var reg=/^[a-zA-Z]*$/;
         return reg.test(texto);
+    }
+    return false;
+}
+
+function validate_empty(texto){
+    if (texto.length > 0){
+        return true;
     }
     return false;
 }
@@ -93,27 +100,15 @@ function validate_observaciones(texto){
     return false;
 }
 
-function validate_aficion(array){
-    var i;
-    var ok=0;
-    for(i=0; i<array.length;i++){
-        if(array[i].checked){
-            ok=1
-        }
-    }
- 
-    if(ok==1){
-        return true;
-    }
-    if(ok==0){
-        return false;
-    }
-}
+
 
 function validate(){
-    var check=true
-    
+    var check=true;
     var v_title=document.getElementById('title').value;
+    var v_fecha=document.getElementById('fecha').value;
+    var v_descripcion=document.getElementById('descripcion').value;
+    var v_productora=document.getElementById('productora').value;
+    var v_addfor=document.getElementById('addfor').value;
    /* var v_password=document.getElementById('pass').value;
     var v_nombre=document.getElementById('nombre').value;
     var v_DNI=document.getElementById('DNI').value;
@@ -124,7 +119,11 @@ function validate(){
     var v_observaciones=document.getElementById('observaciones').value;
     var v_aficion=document.getElementsByName('aficion[]');*/
     
-    var r_title=validate_title(v_title);
+    var r_title=validat_title(v_title);
+    var r_fecha=validate_empty(v_fecha);
+    var r_descripcion=validate_empty(v_descripcion);
+    var r_productora=validate_empty(v_productora);
+    var r_addfor=validate_empty(v_addfor);
     /*var r_password=validate_password(v_password);
     var r_nombre=validate_nombre(v_nombre);
     var r_DNI=validate_DNI(v_DNI);
@@ -141,7 +140,32 @@ function validate(){
     }else{
         document.getElementById('error_title').innerHTML = "";
     }
-   /* if(!r_password){
+    if(!r_fecha){
+        document.getElementById('error_fecha_nacimiento').innerHTML = " * No has introducido ninguna fecha";
+        check=false;
+    }else{
+        document.getElementById('error_fecha_nacimiento').innerHTML = "";
+    }
+    if(!r_descripcion){
+        document.getElementById('error_descripcion').innerHTML = " * No has introducido ninguna descripcion";
+        check=false;
+    }else{
+        document.getElementById('error_descripcion').innerHTML = "";
+    }
+     if(!r_productora){
+        document.getElementById('error_productora').innerHTML = " * No has introducido ninguna productora";
+        check=false;
+    }else{
+        document.getElementById('error_productora').innerHTML = "";
+    }
+     if(!r_addfor){
+        document.getElementById('error_addfor').innerHTML = " * No has introducido ningun usuario";
+        check=false;
+    }else{
+        document.getElementById('error_addfor').innerHTML = "";
+    }
+    /*
+    if(!r_password){
         document.getElementById('error_pass').innerHTML = " * La contraseña introducida no es valida";
         check=false;
     }else{
@@ -195,5 +219,6 @@ function validate(){
     }else{
         document.getElementById('error_aficion').innerHTML = "";
     }*/
+    
     return check;
 }

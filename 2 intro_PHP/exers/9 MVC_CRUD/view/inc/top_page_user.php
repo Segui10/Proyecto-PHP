@@ -9,10 +9,10 @@
     	<script type="text/javascript">
         	$(function() {
         		$('#fecha').datepicker({
-        			dateFormat: 'dd/mm/yy', 
+        			dateFormat: 'yy/mm/dd', 
         			changeMonth: true, 
         			changeYear: true, 
-        			yearRange: '1900:2016',
+        			yearRange: '1900:2020',
         			onSelect: function(selectedDate) {
         			}
         		});

@@ -2,23 +2,96 @@
 
     <div class="container">
     	<div class="row">
-    		<div class="createc">
+            <div class="menu4">
+    		<div class="createo">
+            <div class="createplus">
+            <div class="textbuttont">
+            <a href="index.php?page=controller_user&op=create">Create</a>
+            </div>
+            </div>
+            </div>
+
+            <div class="createc">
             <div class="create">
             <div class="textbuttont">
-            <a href="index.php?page=controller_user&op=create">Create One</a>
+            <a href="index.php?page=controller_user&op=listp">Peliculas</a>
             </div>
             </div>
             <div class="create">
             <div class="textbuttont">
-            <a href="index.php?page=controller_user&op=create">Create Dummies</a>
+            <a href="index.php?page=controller_user&op=lists">Series</a>
             </div>
             </div>
             <div class="create">
             <div class="textbuttont">
-            <a href="index.php?page=controller_user&op=create">Delete All</a>
+            <a href="index.php?page=controller_user&op=list">Todo</a>
             </div>
             </div>
             </div>
+            </div>
+            <?php
+            if(($_GET['op']==="lists") || ($_GET['op']==="listsf")){
+             echo '<div class="menu4">';
+             echo '<div class="createop">';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=lists">Titulo</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=listsf">Fecha</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=listf">Finalizado</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '</div>';
+             echo '</div>';
+            }else if(($_GET['op']==="listp") || ($_GET['op']==="listpf")){
+            echo '<div class="menu4">';
+             echo '<div class="createop">';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=listp">Titulo</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=listpf">Fecha</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=listf">Finalizado</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '</div>';
+             echo '</div>';
+            }else{
+            echo '<div class="menu4">';
+             echo '<div class="createop">';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=list">Titulo</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=listf">Fecha</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '<div class="createop1">';
+             echo '<div class="textbuttont">';
+             echo '<a href="index.php?page=controller_user&op=list">Finalizado</a>';
+             echo '</div>';
+             echo '</div>';
+             echo '</div>';
+             echo '</div>';
+            }
+            ?>
                 <?php
                 //<p><a href="index.php?page=controller_user&op=create"><img src="view/img/anadir.png"></a></p>
                     if ($rdo->num_rows === 0){
