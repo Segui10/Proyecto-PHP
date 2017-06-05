@@ -30,7 +30,7 @@
             </div>
             </div>
             <?php
-            if(($_GET['op']==="lists") || ($_GET['op']==="listsf")){
+            if(($_GET['op']==="lists") || ($_GET['op']==="listsf") || ($_GET['op']==="listse")){
              echo '<div class="menu4">';
              echo '<div class="createop">';
              echo '<div class="createop1">';
@@ -45,12 +45,12 @@
              echo '</div>';
              echo '<div class="createop1">';
              echo '<div class="textbuttont">';
-             echo '<a href="index.php?page=controller_user&op=listf">Finalizado</a>';
+             echo '<a href="index.php?page=controller_user&op=listse">Emision</a>';
              echo '</div>';
              echo '</div>';
              echo '</div>';
              echo '</div>';
-            }else if(($_GET['op']==="listp") || ($_GET['op']==="listpf")){
+            }else if(($_GET['op']==="listp") || ($_GET['op']==="listpf") || ($_GET['op']==="listpe")){
             echo '<div class="menu4">';
              echo '<div class="createop">';
              echo '<div class="createop1">';
@@ -65,7 +65,7 @@
              echo '</div>';
              echo '<div class="createop1">';
              echo '<div class="textbuttont">';
-             echo '<a href="index.php?page=controller_user&op=listf">Finalizado</a>';
+             echo '<a href="index.php?page=controller_user&op=listpe">Emision</a>';
              echo '</div>';
              echo '</div>';
              echo '</div>';
@@ -85,7 +85,7 @@
              echo '</div>';
              echo '<div class="createop1">';
              echo '<div class="textbuttont">';
-             echo '<a href="index.php?page=controller_user&op=list">Finalizado</a>';
+             echo '<a href="index.php?page=controller_user&op=liste">Emision</a>';
              echo '</div>';
              echo '</div>';
              echo '</div>';

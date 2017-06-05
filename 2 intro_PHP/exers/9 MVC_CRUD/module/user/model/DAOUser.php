@@ -32,6 +32,15 @@
             return $res;
 		}
 
+        function select_all_user_emision(){
+            $sql = "SELECT * FROM series ORDER BY emision DESC";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
+
         function select_all_user_fecha(){
             $sql = "SELECT * FROM series ORDER BY relasedate ASC";
             
@@ -72,6 +81,24 @@
 
         function select_series_fecha(){
             $sql = "SELECT * FROM series WHERE tipo='Serie' ORDER BY relasedate ASC";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
+
+         function select_peliculas_emision(){
+            $sql = "SELECT * FROM series  WHERE tipo='Pelicula' ORDER BY emision DESC";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
+
+        function select_series_emision(){
+            $sql = "SELECT * FROM series WHERE tipo='Serie' ORDER BY emision DESC";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

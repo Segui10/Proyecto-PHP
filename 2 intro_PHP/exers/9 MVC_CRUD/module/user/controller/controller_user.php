@@ -3,6 +3,23 @@
     //session_start();
     
     switch($_GET['op']){
+    case 'liste';
+            try{
+                $daouser = new DAOUser();
+                $rdo = $daouser->select_all_user_emision();
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                include("module/user/view/list_user.php");
+            }
+            break;
+
         case 'listf';
             try{
                 $daouser = new DAOUser();
@@ -92,6 +109,40 @@
             try{
                 $daouser = new DAOUser();
                 $rdo = $daouser->select_series_fecha();
+            }catch (Exception $e){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }
+            
+            if(!$rdo){
+                $callback = 'index.php?page=503';
+                die('<script>window.location.href="'.$callback .'";</script>');
+            }else{
+                include("module/user/view/list_user.php");
+            }
+            break;
+
+            case 'listpe';
+                try{
+                    $daouser = new DAOUser();
+                    $rdo = $daouser->select_peliculas_emision();
+                }catch (Exception $e){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }
+                
+                if(!$rdo){
+                    $callback = 'index.php?page=503';
+                    die('<script>window.location.href="'.$callback .'";</script>');
+                }else{
+                    include("module/user/view/list_user.php");
+                }
+                break;
+
+            case 'listse';
+            try{
+                $daouser = new DAOUser();
+                $rdo = $daouser->select_series_emision();
             }catch (Exception $e){
                 $callback = 'index.php?page=503';
                 die('<script>window.location.href="'.$callback .'";</script>');
