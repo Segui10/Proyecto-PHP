@@ -320,6 +320,13 @@
                 </font></font></td>
             </tr>
 
+            <tr>
+                <td>Youtube: </td>
+                <td><input type="text" id="youtube" name="youtube" placeholder="URL" value="<?php echo $user['youtube'];?>"/></td>
+                <td><font color="red">
+                </font></font></td>
+            </tr>
+
 
 
             <tr>

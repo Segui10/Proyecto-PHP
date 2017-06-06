@@ -110,6 +110,14 @@
             </tr>
 
 
+            <tr>
+                <td>Youtube: </td>
+                <td><input type="text" id="youtube" name="youtube" placeholder="URL" value=""/></td>
+                <td><font color="red">
+                </font></font></td>
+            </tr>
+
+
 
             <tr>
                 <td><input type="submit" name="create" id="create"/></td>

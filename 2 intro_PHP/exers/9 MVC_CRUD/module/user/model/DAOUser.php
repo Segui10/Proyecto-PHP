@@ -14,8 +14,9 @@
             $addfor=$datos[addfor];
             $img=$datos[img];
             $emision=$datos[emision];
-        	$sql = " INSERT INTO series (titulo, tipo, generos, relasedate, descripcion, productora, addfor, emision, img)"
-        		. " VALUES ('$titulo', '$tipo', '$generos', '$relasedate', '$descripcion', '$productora', '$addfor', '$emision', '$img')";
+            $youtube=$datos[youtube];
+        	$sql = " INSERT INTO series (titulo, tipo, generos, relasedate, descripcion, productora, addfor, emision, img, youtube)"
+        		. " VALUES ('$titulo', '$tipo', '$generos', '$relasedate', '$descripcion', '$productora', '$addfor', '$emision', '$img', '$youtube')";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);
@@ -129,9 +130,9 @@
             $addfor=$datos['addfor'];
             $img=$datos['img'];
             $emision=$datos['emision'];
-            
+            $youtube=$datos['youtube'];
             $sql = " UPDATE series SET titulo='$titulo', tipo='$tipo', generos='$generos', relasedate='$relasedate', descripcion='$descripcion', productora='$productora',"
-                . " addfor='$addfor', emision='$emision', img='$img' WHERE titulo='$titulo'";
+                . " addfor='$addfor', emision='$emision', img='$img', youtube='$youtube' WHERE titulo='$titulo'";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

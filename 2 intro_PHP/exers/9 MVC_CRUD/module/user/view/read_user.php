@@ -43,9 +43,13 @@
             </div>
         </div>
 
+        <div class="youtubecont">
+         <iframe allowfullscreen="" class="YOUTUBE-iframe-video" frameborder="0" height="325" src="<?php echo $user['youtube'];?>" width="585"></iframe>
+        </div>
 
-       
+       <div class="contprin2" ">
         <?php
+
         if($user['tipo']==="Serie"){
         echo '<div class="serier">';
         echo '<div class="textcont">';
@@ -62,9 +66,6 @@
         ?>
        
 
-        <div class="padread">
-        
-        </div>
 
         <div class="readunderi" ">
         <div class="textcont">
@@ -74,8 +75,7 @@
         </div>
         </div>
 
-        <div class="padread">
-        </div>
+       
 
         
         <?php
@@ -94,12 +94,21 @@
               }
 
         ?>
-
-        <div class="padread">
+        <div class="readunderi" ">
+        <div class="textcont">
+        <?php
+             echo 'Añadido por: '.$user['addfor'].'';
+        ?>
         </div>
-
-        
+        </div>
+      </div>
+      <div class="returnc">
+      <div class="returncont">
+      <div class="return">
+      <a href="index.php?page=controller_user&op=list&view=view1">Volver</a>
+      </div>
+      </div>
+      </div>
         
     </div>
-    <p><a href="index.php?page=controller_user&op=list&view=view1">Volver</a></p>
 </div>
