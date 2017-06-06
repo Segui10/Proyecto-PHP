@@ -106,11 +106,6 @@
                 <td>Imagen: </td>
                 <td><input type="text" id="img" name="img" placeholder="URL" value=""/></td>
                 <td><font color="red">
-                    <span id="error_addfor" class="error">
-                        <?php
-                           echo $error['addfor']
-                        ?>
-                    </span>
                 </font></font></td>
             </tr>
 
@@ -118,7 +113,7 @@
 
             <tr>
                 <td><input type="submit" name="create" id="create"/></td>
-                <td align="right"><a href="index.php?page=controller_user&op=list">Volver</a></td>
+                <td align="right"><a href="index.php?page=controller_user&op=list&view=view1">Volver</a></td>
             </tr>
         </table>
     </form>

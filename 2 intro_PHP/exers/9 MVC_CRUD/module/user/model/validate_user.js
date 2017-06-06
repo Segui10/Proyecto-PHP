@@ -118,8 +118,7 @@ function validate(){
     var v_idioma=document.getElementById('idioma[]');
     var v_observaciones=document.getElementById('observaciones').value;
     var v_aficion=document.getElementsByName('aficion[]');*/
-    
-    var r_title=validat_title(v_title);
+    var r_title=validate_empty(v_title);
     var r_fecha=validate_empty(v_fecha);
     var r_descripcion=validate_empty(v_descripcion);
     var r_productora=validate_empty(v_productora);

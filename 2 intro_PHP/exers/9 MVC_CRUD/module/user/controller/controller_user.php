@@ -252,7 +252,7 @@
                     
                     if($rdo){
                         echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
-                        $callback = 'index.php?page=controller_user&op=list';
+                        $callback = 'index.php?page=controller_user&op=list&view=view1';
                         die('<script>window.location.href="'.$callback .'";</script>');
                     }else{
                         $callback = 'index.php?page=503';
@@ -293,7 +293,7 @@
                     
 		            if($rdo){
             			echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
-            			$callback = 'index.php?page=controller_user&op=list';
+            			$callback = 'index.php?page=controller_user&op=list&view=view1';
         			    die('<script>window.location.href="'.$callback .'";</script>');
             		}else{
             			$callback = 'index.php?page=503';
@@ -357,7 +357,7 @@
             	
             	if($rdo){
         			echo '<script language="javascript">alert("Borrado en la base de datos correctamente")</script>';
-        			$callback = 'index.php?page=controller_user&op=list';
+        			$callback = 'index.php?page=controller_user&op=list&view=view1';
     			    die('<script>window.location.href="'.$callback .'";</script>');
         		}else{
         			$callback = 'index.php?page=503';
@@ -383,7 +383,7 @@
                 
                 if($rdo){
                     echo '<script language="javascript">alert("Borrado en la base de datos correctamente")</script>';
-                    $callback = 'index.php?page=controller_user&op=list';
+                    $callback = 'index.php?page=controller_user&op=list&view=view1';
                     die('<script>window.location.href="'.$callback .'";</script>');
                 }else{
                     $callback = 'index.php?page=503';

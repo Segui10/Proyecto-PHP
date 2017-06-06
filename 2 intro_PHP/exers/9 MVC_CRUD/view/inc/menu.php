@@ -10,7 +10,7 @@
     </div>
     <div class="buttonmenu">
 		<div class="textbuttonmenu">
-		<a href="index.php?page=controller_user&op=list">Usuario</a>
+		<a href="index.php?page=controller_user&op=list&view=view1">Contenido</a>
 		</div>
     </div>
     <div class="sepmenu">

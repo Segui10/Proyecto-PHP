@@ -101,5 +101,5 @@
         
         
     </div>
-    <p><a href="index.php?page=controller_user&op=list">Volver</a></p>
+    <p><a href="index.php?page=controller_user&op=list&view=view1">Volver</a></p>
 </div>

@@ -253,6 +253,26 @@ h1{
 	width: 180px;
 }
 
+.ttitulo1{
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	color: white;
+	background-color: #FE2E2E;
+	height: 40px;
+	width: 123px;
+}
+
+.ttitulo1:hover {
+	background-color:#FA5858;
+	
+}
+.ttitulo1:active {
+	background-color:#F5A9A9;
+	color: #333;
+	
+}
+
 .enemision{
 	margin-top: 5px;
 	margin-left: 5px;
@@ -272,7 +292,10 @@ h1{
 	height: 40px;
 	width: 180px;
 }
-
+.tttext a{
+	text-decoration:none;  
+	color:white;
+}
 .tttext{
 	margin-top: 5px;
 	text-align: center;
@@ -610,4 +633,45 @@ h1{
 	margin-left: 5px;
 	width: 1035px;
 	height: 490px;
+}
+
+.createv{
+	text-decoration: none;
+	float: left;
+	margin-left: 5px;
+	background: #CC2EFA;
+	width: 270px;
+	height: 55px;
+	color: white;
+}
+
+.createv:hover {
+	background-color:#D358F7;
+	
+}
+.createv:active {
+	background-color:#DA81F5;
+	color: #333;
+	
+}
+
+.createo1{
+	float:left;
+	text-decoration: none;
+	margin-left: 15px;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	background: #585858;
+	width: 280px;
+	height: 60px;
+	color: white;
+}
+
+.cont2{
+	margin-bottom: 20px;
+	margin-left: 5%;
+	background-color: #333;
+	float: left;
+	width: 1130px;
+	height: 50px;
 }

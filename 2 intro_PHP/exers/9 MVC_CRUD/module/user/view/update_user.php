@@ -1,10 +1,10 @@
 <div id="contenido">
-    <form autocomplete="on" method="post" name="aupdate_user" id="update_user" onsubmit="return validate();" action="index.php?page=controller_user&op=update">
+    <form autocomplete="on" method="post" name="aupdate_user" id="update_user" onsubmit="return validate();" action="index.php?page=controller_user&op=update&view=view1">
         <h1>Modificar Elemento</h1>
         <table border='0'>
             <tr>
                 <td>Titulo: </td>
-                <td><input type="text" id="title" name="title" value="<?php echo $user['titulo'];?>" /></td>
+                <td><input type="text" id="title" name="title" value="<?php echo $user['titulo'];?>" readonly/></td>
                 <td><font color="red">
                     <span id="error_title" class="error">
                         <?php
@@ -324,7 +324,7 @@
 
             <tr>
                 <td><input type="submit" name="update" id="update"/></td>
-                <td align="right"><a href="index.php?page=controller_user&op=list">Volver</a></td>
+                <td align="right"><a href="index.php?page=controller_user&op=list&view=view1">Volver</a></td>
             </tr>
         </table>
     </form>
