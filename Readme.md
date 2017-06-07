@@ -69,7 +69,6 @@ En esta vista podremos observar los elementos mas compactos para visualizar todo
 
 # Contacto
 En esta opcion del menu principal podemos ver en el gmaps donde esta situado la ciudad donde se hizo dicha aplicacion web
-En esta vista podremos observar los elementos mas compactos para visualizar todo el contenido mas rapido
 <p align="center">
   <img src="https://lh3.googleusercontent.com/1Ygs6GThsqYZ0UgJK997rebTnsa9M4-V02c62iUQh5oNO6XmmlpNunWaUsAtQ5o3XgxD4dtvQLqMbPU=w1920-h950-rw" width="900px"/>
 </p>
